@@ -30,8 +30,20 @@
       <li>It does not sell or share any data, and it has no ads or analytics.</li>
       <li>It has no server of its own. Data goes only between the owner's computer and TikTok, YouTube, Twitch and Google Gemini (which suggests titles from clip text the owner chooses to send).</li>
     </ul>
+    <h3>TikTok data, in detail</h3>
+    <ul>
+      <li><b>user.info.basic:</b> the TikTok display name and avatar, shown so the owner knows which account is connected.</li>
+      <li><b>video.upload and video.publish:</b> used only to send videos the owner chose, with the title and settings the owner entered. AutoClipper keeps the post ID and status TikTok returns, so it can show whether the post is live.</li>
+      <li>No followers, messages, comments, analytics or other users' data are read.</li>
+    </ul>
+    <h3>How long data is kept</h3>
+    <p>Login tokens are kept until the owner disconnects. TikTok access tokens expire after 24 hours and are renewed automatically while the owner stays connected. Post IDs and statuses are kept with each video file until the owner deletes that video.</p>
+    <h3>Deleting data</h3>
+    <p>Clicking Disconnect deletes the stored TikTok or YouTube login straight away. Deleting a video from the AutoClipper folder deletes its title, caption and post status. Videos already posted can be deleted in the TikTok or YouTube app.</p>
     <h3>Removing access</h3>
     <p>The owner can disconnect at any time with the Disconnect button in AutoClipper, which deletes the stored login. Access can also be removed in TikTok under Settings and privacy → Security → Manage app permissions, and in the Google Account under Security → Third-party connections.</p>
+    <h3>Contact</h3>
+    <p>Questions about this policy: open an issue at <a href="https://github.com/AathifZahir/autoclipper-site/issues">github.com/AathifZahir/autoclipper-site/issues</a>.</p>
     <h3>Changes</h3>
     <p>This policy may be updated. The date at the top of this page shows the latest version.</p>
   </section>
