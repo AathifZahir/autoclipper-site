@@ -4,45 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AutoClipper</title>
-<meta name="description" content="AutoClipper is a personal desktop tool that turns Twitch stream highlights into short vertical videos and lets its owner review and post them to their own YouTube and TikTok accounts.">
+<meta name="description" content="AutoClipper is a free, open-source Windows app that clips hype moments from live Twitch streams and helps you review and post them to YouTube Shorts and TikTok.">
+<link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="topnav">
+  <a class="brand" href="./"><img src="app-icon.png" alt="">AutoClipper</a>
+  <nav><a href="./" class="on">Home</a><a href="download.html">Download</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</div>
 <main>
-  <header>
-    <span class="app">AutoClipper</span>
-    <h1>Stream highlights, ready to post</h1>
-    <nav><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+  <header class="hero">
+    <h1>Clip the hype moments from live streams, then post them in minutes</h1>
+    <p class="lead">AutoClipper is a free, open-source Windows app for clip channels. It notices when Twitch chat explodes, clips the moment, turns it into a vertical video with a title and captions, and helps you post it to YouTube Shorts and TikTok.</p>
+    <div class="cta"><a class="btn primary" href="download.html">Download for Windows</a><a class="btn ghost" href="https://github.com/AathifZahir/autoclipper">View the source on GitHub</a></div>
+    <p class="meta">Free · Open source (MIT) · Runs on your own computer · No account to create</p>
   </header>
-
-  <section>
-    <h2>What it is</h2>
-    <p>AutoClipper is a personal, non-commercial desktop tool. It runs on its owner's own computer and is used only by its owner. It is not offered to the public, and nobody can sign up for it.</p>
-  </section>
 
   <section>
     <h2>How it works</h2>
     <ol>
-      <li>It watches live Twitch streams and notices when chat suddenly gets excited.</li>
-      <li>It creates a Twitch clip of that moment and turns it into a vertical video with a title and captions.</li>
-      <li>The owner reviews each video on their own computer, edits the title and caption, and chooses where to post it.</li>
-      <li>When the owner clicks Post, the video is uploaded to the owner's own YouTube channel or TikTok account, with the visibility and settings they picked.</li>
+      <li><b>Pick what to watch.</b> Choose a game (AutoClipper follows its biggest live streams) or a list of streamers.</li>
+      <li><b>It finds the moments.</b> When chat suddenly gets several times faster than normal, or several people type "clip it", AutoClipper asks Twitch to create a clip of the last 30–60 seconds.</li>
+      <li><b>It makes a vertical video.</b> The clip becomes a 1080×1920 video with a title at the top and word-by-word captions of what the streamer said.</li>
+      <li><b>You review and post.</b> In the publisher you watch each video, let Gemini suggest a title and caption, edit them, and choose where to post.</li>
     </ol>
-    <p>Nothing is posted without the owner reviewing it and clicking Post. Every video credits the original streamer in its caption.</p>
+  </section>
+
+  <div class="features">
+    <div class="feature"><h3>Moment detection</h3><p>Reads public Twitch chat and spots spikes. One spammer can't trigger it, and you set limits like "6 clips per hour".</p></div>
+    <div class="feature"><h3>Captions and titles</h3><p>Speech-to-text runs on your PC for free. Optional Gemini titles from your own free API key.</p></div>
+    <div class="feature"><h3>YouTube Shorts</h3><p>Upload to your channel as Public, Unlisted or Private, with title, description and tags.</p></div>
+    <div class="feature"><h3>TikTok</h3><p>Send a video to your TikTok inbox to finish in the app, or post it from AutoClipper's TikTok posting screen.</p></div>
+  </div>
+
+  <section>
+    <h2>Posting to TikTok</h2>
+    <p>Connect your TikTok account with TikTok's own login page, then pick how to post each video:</p>
+    <ul>
+      <li><b>Send to inbox:</b> the video goes to your TikTok inbox as a draft. Open TikTok, add sounds or effects, and post.</li>
+      <li><b>Post to TikTok:</b> a posting screen shows the video, which account it goes to, an editable title, who can view it (you choose, nothing is preselected), comment/Duet/Stitch settings and content disclosure. Nothing is posted until you click Post, and the screen then shows the post's status.</li>
+    </ul>
+    <p>AutoClipper only acts on the TikTok account you connect, and only when you click. It never comments, likes, follows or messages.</p>
   </section>
 
   <section>
-    <h2>Platforms it uses</h2>
-    <ul>
-      <li><b>Twitch:</b> reads public chat and creates clips.</li>
-      <li><b>TikTok:</b> sends videos to the owner's TikTok inbox as drafts, or posts them with the settings the owner chose on the Post to TikTok screen.</li>
-      <li><b>YouTube:</b> uploads videos to the owner's channel as Shorts.</li>
-      <li><b>Google Gemini:</b> suggests titles and captions from the clip's text.</li>
-    </ul>
+    <h2>Your data stays with you</h2>
+    <p>AutoClipper runs on your computer. Your videos, settings and logins are saved there, not on our servers. The only online piece is a small login helper that finishes TikTok logins without storing anything. <a href="privacy.html">Read the Privacy Policy</a>.</p>
   </section>
 
-  <footer>Updated 16 November 2026 · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></footer>
+  <section>
+    <h2>Questions</h2>
+    <details><summary>What does it cost?</summary><p>Nothing. AutoClipper is free and open source. Gemini titles use your own free Google AI Studio key.</p></details>
+    <details><summary>What do I need?</summary><p>Windows 10 or 11, Python 3.11 or newer, and a Twitch account. YouTube and TikTok are optional.</p></details>
+    <details><summary>Is it allowed to repost streamers' clips?</summary><p>Clip only streamers who are OK with it. Many run official clipping programs. Every caption credits the streamer, and you're responsible for what you post.</p></details>
+    <details><summary>Where do I report a problem?</summary><p>Open an issue on <a href="https://github.com/AathifZahir/autoclipper/issues">GitHub</a>.</p></details>
+  </section>
+
+  <footer>AutoClipper · <a href="download.html">Download</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="https://github.com/AathifZahir/autoclipper">GitHub</a></footer>
 </main>
 </body>
 </html>

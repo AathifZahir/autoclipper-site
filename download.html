@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download AutoClipper</title>
+<link rel="icon" href="app-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topnav">
+  <a class="brand" href="./"><img src="app-icon.png" alt="">AutoClipper</a>
+  <nav><a href="./">Home</a><a href="download.html" class="on">Download</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</div>
+<main>
+  <header class="hero">
+    <h1>Download AutoClipper</h1>
+    <p class="lead">Version 1.0.0 for Windows 10 and 11. Free and open source.</p>
+    <div class="cta"><a class="btn primary" href="https://github.com/AathifZahir/autoclipper/releases/latest">Download the latest release (.zip)</a></div>
+  </header>
+
+  <section>
+    <h2>Install</h2>
+    <ol>
+      <li>Install <a href="https://www.python.org/downloads/">Python 3.11 or newer</a>. On the first installer screen, tick <b>Add python.exe to PATH</b>.</li>
+      <li>Download the zip above and unzip it to a folder, for example <code>Documents\AutoClipper</code>.</li>
+      <li>Double-click <code>setup.bat</code>. It installs what AutoClipper needs (about 600 MB the first time) and asks a few questions:
+        <ul>
+          <li><b>Twitch:</b> log in with the Twitch account that will create the clips.</li>
+          <li><b>What to watch:</b> a game or a list of streamers.</li>
+          <li><b>Limits:</b> clip length, clips per hour and how easily a moment counts.</li>
+          <li><b>Text:</b> captions, title, and an optional Gemini key for AI titles.</li>
+        </ul></li>
+      <li>Double-click <code>test-clip.bat</code> and type a channel that's live, to check everything works.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Use</h2>
+    <ul>
+      <li><code>start.bat</code>: starts clipping. Leave the window open.</li>
+      <li><code>test-mode.bat</code>: shows which moments it would clip, without clipping.</li>
+      <li><code>publisher.bat</code>: opens the publisher in your browser to review videos, write titles and post.</li>
+      <li><code>open-final-folder.bat</code>: opens your finished videos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Connect YouTube and TikTok</h2>
+    <p>Open <code>publisher.bat</code>.</p>
+    <ul>
+      <li><b>TikTok:</b> click <b>Connect</b> next to TikTok and approve AutoClipper on TikTok's page.</li>
+      <li><b>YouTube:</b> follow the <i>Connect YouTube</i> steps on the page to make a free Google login file (about 5 minutes), then click <b>Connect</b>.</li>
+    </ul>
+    <p>You can disconnect either one at any time with the <b>Disconnect</b> button.</p>
+  </section>
+
+  <section>
+    <h2>Source code</h2>
+    <p>Everything is on <a href="https://github.com/AathifZahir/autoclipper">GitHub</a> under the MIT license, including the TikTok <a href="https://github.com/AathifZahir/autoclipper/tree/main/login-helper">login helper</a>.</p>
+  </section>
+
+  <footer>AutoClipper · <a href="./">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer>
+</main>
+</body>
+</html>

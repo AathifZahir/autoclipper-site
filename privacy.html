@@ -4,51 +4,76 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AutoClipper Privacy Policy</title>
+<link rel="icon" href="app-icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="topnav">
+  <a class="brand" href="./"><img src="app-icon.png" alt="">AutoClipper</a>
+  <nav><a href="./">Home</a><a href="download.html">Download</a><a href="privacy.html" class="on">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</div>
 <main>
   <header>
-    <a class="app" href="./">AutoClipper</a>
     <h1>Privacy Policy</h1>
     <p class="meta">Effective 16 November 2026</p>
-    <nav><a href="./">Home</a><a href="terms.html">Terms of Service</a></nav>
   </header>
 
   <section>
-    <p>AutoClipper is used only by its owner, on their own computer. It does not collect data from other people.</p>
-    <h3>What AutoClipper stores</h3>
+    <p>AutoClipper is a free, open-source desktop app. It runs on your own computer. We (the AutoClipper project) don't run accounts, servers that keep your data, ads or analytics. This policy explains what data the app handles and where it goes.</p>
+
+    <h3>Data stored on your computer only</h3>
     <ul>
-      <li><b>Login tokens</b> from TikTok and YouTube, so the owner can upload without signing in each time. They are stored only in a file on the owner's computer.</li>
-      <li><b>Basic profile info</b> (the TikTok display name and username), used only to show which account is connected and to link to posted videos.</li>
-      <li><b>The owner's own video files</b> and their titles and captions, stored on the owner's computer.</li>
+      <li><b>Your settings</b>, such as which game or streamers to watch, limits, and API keys you choose to add (for example a Gemini key).</li>
+      <li><b>Login tokens</b> for Twitch, TikTok and YouTube, so you don't have to sign in every time.</li>
+      <li><b>Your videos</b>, plus their titles, captions, transcripts and posting status.</li>
     </ul>
-    <h3>What it does not do</h3>
+    <p>We can't see any of this. It stays in the AutoClipper folder on your computer.</p>
+
+    <h3>Data from TikTok</h3>
+    <p>When you connect TikTok, AutoClipper asks for these permissions:</p>
     <ul>
-      <li>It does not collect, store or process data about other TikTok or YouTube users.</li>
-      <li>It does not sell or share any data, and it has no ads or analytics.</li>
-      <li>It has no server of its own. Data goes only between the owner's computer and TikTok, YouTube, Twitch and Google Gemini (which suggests titles from clip text the owner chooses to send).</li>
+      <li><b>user.info.basic:</b> your TikTok display name, avatar and username. These are shown so you know which account a video will go to, and used to link to your posted videos.</li>
+      <li><b>video.upload:</b> sends a video you chose to your TikTok inbox as a draft.</li>
+      <li><b>video.publish:</b> posts a video you previewed on the Post to TikTok screen, with the title and settings you chose there.</li>
     </ul>
-    <h3>TikTok data, in detail</h3>
+    <p>AutoClipper keeps the post ID and status TikTok returns, so it can show whether a post is live. It doesn't read your followers, messages, comments, analytics or anyone else's data.</p>
+
+    <h3>The TikTok login helper</h3>
+    <p>TikTok needs a secret key to finish a login, and a secret can't be included in an app anyone can download. So when you connect TikTok, your computer sends the one-time login code to the AutoClipper login helper, a small program on Cloudflare. The helper adds the key, asks TikTok for your login, and sends it straight back to your computer. It does the same when your login is renewed every 24 hours, and when you click Disconnect, it asks TikTok to revoke access.</p>
+    <p>The helper <b>does not store or log</b> codes, tokens or any other data. Its <a href="https://github.com/AathifZahir/autoclipper/tree/main/login-helper">source code is public</a>. Cloudflare, which runs it, processes the requests under the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.</p>
+
+    <h3>Other services AutoClipper talks to</h3>
     <ul>
-      <li><b>user.info.basic:</b> the TikTok display name and avatar, shown so the owner knows which account is connected.</li>
-      <li><b>video.upload and video.publish:</b> used only to send videos the owner chose, with the title and settings the owner entered. AutoClipper keeps the post ID and status TikTok returns, so it can show whether the post is live.</li>
-      <li>No followers, messages, comments, analytics or other users' data are read.</li>
+      <li><b>Twitch:</b> AutoClipper reads public chat in the channels you choose, only in memory, to spot moments. It creates clips with your Twitch account and downloads them.</li>
+      <li><b>YouTube:</b> uploads the videos you choose to your channel, using your own Google login.</li>
+      <li><b>Google Gemini</b> (optional, with your own key): receives a clip's transcript, recent chat lines and stream title, and suggests a title and caption.</li>
+      <li><b>Telegram</b> (optional): sends finished clips to your own Telegram bot.</li>
     </ul>
+    <p>Each of these services handles that data under its own privacy policy.</p>
+
     <h3>How long data is kept</h3>
-    <p>Login tokens are kept until the owner disconnects. TikTok access tokens expire after 24 hours and are renewed automatically while the owner stays connected. Post IDs and statuses are kept with each video file until the owner deletes that video.</p>
-    <h3>Deleting data</h3>
-    <p>Clicking Disconnect deletes the stored TikTok or YouTube login straight away. Deleting a video from the AutoClipper folder deletes its title, caption and post status. Videos already posted can be deleted in the TikTok or YouTube app.</p>
-    <h3>Removing access</h3>
-    <p>The owner can disconnect at any time with the Disconnect button in AutoClipper, which deletes the stored login. Access can also be removed in TikTok under Settings and privacy → Security → Manage app permissions, and in the Google Account under Security → Third-party connections.</p>
+    <p>Data on your computer stays until you delete it. TikTok logins last until you disconnect, and TikTok's access tokens expire after 24 hours and are renewed automatically. The login helper keeps nothing.</p>
+
+    <h3>Deleting your data</h3>
+    <ul>
+      <li>Click <b>Disconnect</b> next to TikTok or YouTube in the publisher. This deletes the saved login, and for TikTok also revokes AutoClipper's access.</li>
+      <li>Delete a video from the AutoClipper folder to delete its title, caption and status. Delete the whole folder to remove everything.</li>
+      <li>You can also remove access in TikTok (Settings and privacy → Security → Manage app permissions) and in your Google Account (Security → Third-party connections).</li>
+      <li>Videos you've posted can be deleted in the TikTok or YouTube app.</li>
+    </ul>
+
+    <h3>Children</h3>
+    <p>AutoClipper isn't meant for children under 13, or under the minimum age to use TikTok, YouTube or Twitch where you live.</p>
+
     <h3>Contact</h3>
-    <p>Questions about this policy: open an issue at <a href="https://github.com/AathifZahir/autoclipper-site/issues">github.com/AathifZahir/autoclipper-site/issues</a>.</p>
+    <p>Questions about this policy: open an issue at <a href="https://github.com/AathifZahir/autoclipper/issues">github.com/AathifZahir/autoclipper/issues</a>.</p>
+
     <h3>Changes</h3>
-    <p>This policy may be updated. The date at the top of this page shows the latest version.</p>
+    <p>We'll update this page if the policy changes. The date at the top shows the latest version.</p>
   </section>
 
-  <footer><a href="./">AutoClipper</a> · <a href="terms.html">Terms of Service</a></footer>
+  <footer>AutoClipper · <a href="./">Home</a> · <a href="download.html">Download</a> · <a href="terms.html">Terms of Service</a></footer>
 </main>
 </body>
 </html>
